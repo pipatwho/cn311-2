@@ -19,15 +19,16 @@ void doTask(void *t){
         }
         printf("\n");
     }
-    if(tID == 3){
+    if(tID == 2){
         int sum = 0;
         int i;
         for(i = 1; i< strlen(name); i++){
             sum += (int) name[i];
         }
         printf("THREAD #3 : sum of ASCII = %d",sum);
+        printf("\n");
     }
-    if(tID == 4){
+    if(tID == 3){
         printf("THREAD #4 : = number of character = %d", (int) strlen(name));
     }
 }

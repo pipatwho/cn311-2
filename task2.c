@@ -10,13 +10,13 @@ long rank[16];
 
 int numOfWinner = 0;
 
-void doTask(void *t){
+void doTask(int t){
     int sum = 0;
-    int 
+    int i;
     for(i = 0; i<MAX_VALUE;i++){
         sum = sum + 1;
     }
-    rank[numOfWinner++] = long(t);
+    rank[numOfWinner++] = (long) t;
 }
 
 int main(){
@@ -28,7 +28,7 @@ int main(){
     int i = 0;
     for(i = 0; i<3 ;i++){
         printf("The winner No.%d = ",i+1);
-        printf("THREAD #%d", (int) rank[i]);
+        printf("THREAD #%d\n", (int) rank[i]);
     }
     
     return 0;
